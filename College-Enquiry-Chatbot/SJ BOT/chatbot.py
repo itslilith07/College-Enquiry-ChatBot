@@ -1,0 +1,51 @@
+class ChatBot:
+    def __init__(self, name):
+        self.name = name
+        self.conversation = {
+            "Hi": "Helloo!",
+            "Hey": "Helloo!",
+            "How are you?": "I'm good.</br> <br>Go ahead and write the number of any query. 😃✨ <br> 1.&emsp;Student's Section Enquiry.</br>2.&emsp;About Us Section Enquiry. </br>3.&emsp;Courses Section Enquiry.</br>",
+            "Great": "Go ahead and write the number of any query. 😃✨ <br> 1.&emsp;Student's Section Enquiry.</br>2.&emsp;About Us Section Enquiry. </br>3.&emsp;Courses Section Enquiry.</br>",
+            "good": "Go ahead and write the number of any query. 😃✨  <br> 1.&emsp;Student's Section Enquiry.<br> 2.&emsp;About Us Section Enquiry. </br>3.&emsp;Courses Section Enquiry.</br>",
+            "fine": "Go ahead and write the number of any query. 😃✨  <br> 1.&emsp;Student's Section Enquiry.<br> 2.&emsp;About Us Section Enquiry. </br>3.&emsp;Courses Section Enquiry.</br>",
+            "Thank You": "Your Welcome 😄",
+            "Thanks": "Your Welcome 😄",
+            "Bye": "Thank You for visiting!..",
+            "What do you do?": "I am made to give Information about MMDU college.",
+            "What else can you do?": "I can help you know more about MMDU college",
+            "1": "<b>STUDENT <br>The following are frequently searched terms related to student . Please select one from the options below : <br> <br> 1.1 Curriculars <br>1.2  Extra-Curriculars<br>1.3  Administrative<br>1.4 Examination <br>1.5 Placements </b>",
+            "1.1": "<b>  CURRICULAR <br>  These are the top results: <br> <br> 1.1.1 Institute <br> 1.1.2 Academic Calendar <br> 1.1.3 Syllabus </b>",
+            "1.1.1": "<b> 1.1.1 Institute <br>The link to Institute 👉 <a href='https://www.mmumullana.org/'>Click Here</a> </b>",
+            "1.1.2": "<b > 1.1.2 Academic Calender<br>The link to Academic Calender👉<a href='https://www.mmumullana.org/academic-calendar'>Click Here</a> </b>",
+            "1.1.3": "<b> 1.1.3 Syllabus<br>The link to Syllabus 👉 <a href='https://www.mmumullana.org/downloads'>Click Here</a> </b>",
+            "1.2": "<b>EXTRA-CURRICULAR<br>These are the top results: <br> <br> 1.2.1 Events<br> 1.2.2 Student Welfare </b>",
+            "1.2.1": "<b > 1.2.1 Events<br>The link to Events👉 <a href='https://www.mmumullana.org/events'>Click Here</a></b>",
+            "1.2.2": "<b > 1.2.2 Student Welfare<br>The link to Student Welfare👉<a href='https://www.mmumullana.org/student-welfare'>Click Here</a> </b>",
+            "1.3": "<b>1.3 ADMINISTRATIVE<br>These are the top results: <br> <br> 1.3.1 Administration<br> 1.3.2 Notices </b>",
+            "1.3.1": "<b> 1.3.1 Administration<br>The link to Administration👉 <a href='https://www.mmumullana.org/administration'>Click Here</a> </b>",
+            "1.3.2": "<b> 1.3.2 Notices<br>The link to Notices👉 <a href='https://blog.mmumullana.org/'>Click Here</a> </b>",
+            "1.4": "<b > EXAMINATION <br>These are the top results:<br> 1.4.1 Notices/Question Paper Archive </b>",
+            "1.4.1": "<b > 1.4.1 Notices/Question Paper Archive<br>The link to Notices/Question Paper Archive👉 <a href='https://www.mmumullana.org/examination'>Click Here</a> </b>",
+            "1.5": "<b > PLACEMENTS <br>These are the top results:<br> 1.5.1 Placements<br> 1.5.2 Frequently Asked Questions </b>",
+            "1.5.1": "<b> 1.5.1 Placements<br>The link to Placements👉 <a href='https://www.mmumullana.org/placement'>Click Here</a> </b>",
+            "1.5.2": "<b> 1.5.2 Frequently Asked Questions<br>The link to Frequently Asked Questions👉<a href='https://www.mmumullana.org/placement/faq'>Click Here</a> </b>",
+            "2": "<b> ABOUT US <br>The following are frequently searched terms related to ABOUT US. Please select one from the options below : <br> <br> 2.1 About Us <br>2.2 Self-Disclosures <br>2.3 Fee Payment </b> ",
+            "2.1": "<b > ABOUT US<br>These are the top results:<br> <br> 2.1.1 About MMDU <br> 2.1.2 Rankings-Accreditations </b>",
+            "2.1.1": "<b > 2.1.1 About MMDU<br>The link to About MMDU👉 <a href='https://www.mmumullana.org/overview'>Click Here</a> </b>",
+            "2.1.2": "<b > 2.1.2 Rankings-Accreditations <br>The link to Rankings-Accreditations👉<a href='https://www.mmumullana.org/rankings-accreditations'>Click Here</a> </b>",
+            "2.2": "<b > Self-Disclosures<br>These are the top results:<br> <br> 2.2.1 Disclosures  </b>",
+            "2.2.1": "<b > 2.2.1 Disclosures <br>The link to All Notices👉 <a href='https://www.mmumullana.org/mandatory-disclosure/'>Click Here</a> </b>",
+            "2.3": "<b > Fee Payment<br>These are the top results:<br> <br>2.3.1 Payment Details <br> 2.3.2 Online Payment Portal </b>",
+            "2.3.1": "<b > 2.3.1 Payment Details<br>The link to Payment Details 👉 <a href='https://www.mmumullana.org/fee-structure/'>Click Here</a> </b>",
+            "2.3.2": "<b > 2.3.2 Payment Portal <br>The link to Payment Portal👉<a href='https://erp.mmumullana.org/'>Click Here</a> </b>",
+            "3": "<b > COURSES <br>These are the top results:<br> <br>3.1 Under-Graduate <br> 3.2 Post-Graduate<br> 3.3 Certificate-Courses </b>",
+            "3.1": "<b > 3.1 Under-Graduate<br>The link to Under-Graduate👉 <a href='https://www.mmumullana.org/under-graduate-courses'>Click Here</a> </b>",
+            "3.2": "<b > 3.2 Post-Graduate <br>The link to Post-Graduate👉<a href='https://www.mmumullana.org/post-graduate-courses'>Click Here</a> </b>",
+            "3.3": "<b > 3.3 Certificate-Courses <br>The link to Certificate-Courses👉 <a href='https://www.mmumullana.org/certificate-courses'>Click Here</a> </b>",
+            }
+        self.default_response = "Hi there, Welcome to SJ Bot! 👋 If you need any assistance, I'm always here.Go ahead and write the number of any query. 😃✨<b><br><br>  Which of the following user groups do you belong to? <br><br> 1.&emsp;Student's Section Enquiry. </br>2.&emsp;About Us Section Enquiry. </br>3.&emsp;Courses Section Enquiry.</br><br>"
+
+    def get_response(self, user_input):
+        return self.conversation.get(user_input, self.default_response)
+
+chatbot = ChatBot('<b>SJ BOT</b>')
